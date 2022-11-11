@@ -1,0 +1,156 @@
+hr{
+    margin: 20px;
+}
+/* TASK ONE */
+:root{
+    --backcolorone: #ff5722 ;
+    --wordcolor: white;
+}
+*{
+    margin: 0px;
+    font-size: 40px;
+    font-weight: bold;
+}
+.tone{
+    width: 150px;
+    height: 70px;
+    background-color: var(--backcolorone,black);
+    color: var(--wordcolor , black);
+    margin: 50px auto auto auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 300px;
+    position: relative;
+}
+.tone::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: var(--backcolorone, black);
+    position: absolute;
+    z-index: -1;
+    transform: skew(20deg , 10deg);
+}
+.tone::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: var(--backcolorone, black);
+    position: absolute;
+    z-index: -1;
+    transform: skew(340deg , 350deg );
+
+}
+/* TASK ONE */
+
+/* TASK TWO */
+:root{
+    --backcolortwo: #009688 ;
+}
+
+.ttwo{
+    width: 150px;
+    padding: 20px;
+    margin: 70px auto auto auto;
+    background-color: var(--backcolortwo , blue);
+    color: var(--wordcolor, black);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+}
+.ttwo::before{
+    content: "";
+    width: 20px;
+    height: 100%;
+    background-color: var(--backcolortwo , blue);
+    position: absolute;
+    top: 0px;
+    left: -14px;
+    border-right: 6px solid var(--wordcolor);
+    transform: skewx(15deg)
+}
+/* TASK TWO */
+
+/* TASK FOUR */
+:root{
+    --backcolorthree: black;
+    --back2colorth: #607d8b;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.tfour{
+    width: 200px;
+    height: 200px;
+    margin: 200px auto auto auto;
+    background-color: var(--back2colorth ,red);
+    border-bottom: black solid 5px;
+    position: relative;
+}
+.tfour::after{
+    content: "";
+    width: 137px;
+    height: 137px;
+    background-color: var(--backcolorthree, red);
+    position: absolute;
+    top: -71px;
+    right: 29px;
+    border-right: solid var(--wordcolor , red) 5px;
+    border-bottom: solid var(--wordcolor , red) 5px;
+    transform: rotate(45deg);
+}
+.tfour::before{
+    content: "Elzero";
+    position: absolute;
+    color: var(--wordcolor);
+    left: 10px;
+    bottom: 10px; 
+}
+/* TASK FOUR */
+
+/* TASK FIVE */
+:root{
+    --backcolor: #fa3664;
+    --back2colorfi: #1692fc;
+    --wordcolor: white;
+}
+
+.tfive{
+    width: 200px;
+    height: 200px;
+    margin: 100px auto auto auto;
+    position: relative;
+    backface-visibility: hidden;
+    transition: all 0.5s 0.1s ease;
+}
+.tfive::before{
+    content:"Front";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: var(--backcolor , red);
+    color: var(--wordcolor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}  
+.tfive::after{
+    content: "Back";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: var(--back2colorfi, red);
+    color: var(--wordcolor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(180deg);
+}                
+.tfive:hover{
+    transform: rotateY(180deg);
+    cursor: pointer;
+}
+/* TASK FIVE */
